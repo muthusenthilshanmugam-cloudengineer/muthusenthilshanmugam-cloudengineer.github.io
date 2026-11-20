@@ -1,393 +1,1346 @@
-<section id="experience">
-  <div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <h2 class="section-title">Experience & Professional Profile</h2>
-    <div class="section-line"></div>
+  <title>Muthu Senthil S | Azure Infrastructure Engineer</title>
 
-    <!-- PROFESSIONAL SUMMARY -->
-    <div class="card">
-      <h3>Professional Summary</h3>
-      <p class="meta">Azure Infrastructure Engineer | Coimbatore, India</p>
+  <meta
+    name="description"
+    content="Muthu Senthil S — Azure Infrastructure Engineer based in Coimbatore, specializing in Azure and GCP infrastructure, PowerShell automation, cloud operations, security and disaster recovery."
+  >
 
-      <p>
-        Azure Infrastructure Engineer with 5+ years of experience running
-        enterprise Microsoft Azure and Google Cloud IaaS environments,
-        including 6,000+ Azure VMs across 83 subscriptions and approximately
-        10,000 cloud resources at 100% SLA compliance during my HCLTech tenure.
+  <meta name="theme-color" content="#0F172A">
+
+  <style>
+    /* ==============================
+       COLORS AND BASE STYLES
+       ============================== */
+
+    :root {
+      color-scheme: dark;
+      --bg: #0F172A;
+      --panel: #1E293B;
+      --panel-2: #243449;
+      --text: #F1F5F9;
+      --muted: #CBD5E1;
+      --accent: #38BDF8;
+      --accent-2: #22D3EE;
+      --border: #334155;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        "Segoe UI",
+        -apple-system,
+        BlinkMacSystemFont,
+        Arial,
+        sans-serif;
+      line-height: 1.75;
+    }
+
+    .container {
+      width: min(1120px, 91%);
+      margin-inline: auto;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 4px;
+    }
+
+    a:hover {
+      color: #7DD3FC;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--accent-2);
+      outline-offset: 5px;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      z-index: 100;
+      background: var(--panel);
+      padding: 10px 16px;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    /* ==============================
+       NAVIGATION
+       ============================== */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(15, 23, 42, 0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-block: 17px;
+    }
+
+    .logo {
+      color: var(--text);
+      font-size: 19px;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* ==============================
+       HERO
+       ============================== */
+
+    .hero {
+      padding: 85px 0 60px;
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(56, 189, 248, 0.12),
+          transparent 45%
+        ),
+        linear-gradient(135deg, #0F172A, #17243A);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(39px, 6vw, 65px);
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      color: var(--accent);
+      font-size: clamp(21px, 3vw, 28px);
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 21px;
+      border: 1px solid var(--accent);
+      border-radius: 9px;
+      font-weight: 700;
+      text-decoration: none;
+      transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    .btn-primary:hover {
+      background: #7DD3FC;
+      color: var(--bg);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .btn-outline:hover {
+      background: rgba(56, 189, 248, 0.10);
+      color: #7DD3FC;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .profile-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px 25px;
+      text-align: center;
+    }
+
+    .avatar {
+      display: grid;
+      place-items: center;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 22px;
+      border-radius: 30px;
+      background: linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-2)
+      );
+      color: var(--bg);
+      font-size: 40px;
+      font-weight: 800;
+    }
+
+    .profile-card h2 {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .profile-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .profile-card .badges {
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: 45px;
+    }
+
+    .stat {
+      background: #17283E;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 20px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--accent);
+      font-size: 28px;
+      line-height: 1.4;
+      margin-bottom: 5px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+      display: block;
+    }
+
+    .scope-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 14px;
+    }
+
+    /* ==============================
+       SECTIONS AND CARDS
+       ============================== */
+
+    section {
+      padding-block: 65px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 36px);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .section-line {
+      width: 65px;
+      height: 4px;
+      border-radius: 4px;
+      background: var(--accent);
+      margin-bottom: 25px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 800px;
+      margin-bottom: 28px;
+    }
+
+    .subheading {
+      font-size: 25px;
+      line-height: 1.4;
+      margin: 42px 0 20px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px;
+      margin-bottom: 20px;
+    }
+
+    .card h3,
+    .card h4 {
+      line-height: 1.45;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+    }
+
+    .card h4 {
+      font-size: 18px;
+    }
+
+    .card p + p {
+      margin-top: 14px;
+    }
+
+    .muted,
+    .meta {
+      color: var(--muted);
+    }
+
+    .meta {
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .role-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .date {
+      color: var(--accent);
+      font-size: 13px;
+      white-space: nowrap;
+      padding-top: 4px;
+    }
+
+    .clean {
+      padding-left: 20px;
+    }
+
+    .clean li {
+      color: var(--muted);
+      padding-left: 3px;
+      margin-bottom: 11px;
+    }
+
+    .clean li:last-child {
+      margin-bottom: 0;
+    }
+
+    .clean li::marker {
+      color: var(--accent);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .grid-2 > .card {
+      margin-bottom: 0;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #172E45;
+      color: #BAE6FD;
+      border: 1px solid #38556E;
+      border-radius: 7px;
+      padding: 6px 10px;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .skill-card h4 {
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
+    .certification-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .certification-grid .card {
+      margin-bottom: 0;
+    }
+
+    .cert-code {
+      color: var(--accent);
+      font-size: 25px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .lab-note {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* ==============================
+       CONTACT AND FOOTER
+       ============================== */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .contact-item {
+      display: block;
+      min-width: 0;
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 22px;
+      text-decoration: none;
+    }
+
+    a.contact-item:hover {
+      background: var(--panel-2);
+      border-color: var(--accent);
+      color: var(--text);
+    }
+
+    .contact-label {
+      display: block;
+      color: var(--accent);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .contact-value {
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      background: #0B1220;
+      color: var(--muted);
+      padding-block: 26px;
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ==============================
+       MOBILE
+       ============================== */
+
+    @media (max-width: 900px) {
+      .nav-inner {
+        display: block;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+        gap: 16px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-card {
+        max-width: 440px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .certification-grid {
+        grid-template-columns: 1fr;
+      }
+
+      html {
+        scroll-padding-top: 130px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding-top: 48px;
+      }
+
+      section {
+        padding-block: 42px;
+      }
+
+      .grid-2,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .role-heading {
+        display: block;
+      }
+
+      .date {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .card {
+        padding: 21px;
+      }
+
+      .stat {
+        padding: 16px;
+      }
+
+      .stat strong {
+        font-size: 24px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .btn {
+        transition: none;
+      }
+
+      .btn:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">
+    Skip to content
+  </a>
+
+  <!-- NAVIGATION -->
+  <nav aria-label="Main navigation">
+    <div class="container nav-inner">
+
+      <a class="logo" href="#home">
+        Muthu Senthil S<span>.</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="container">
+
+      <div class="hero-grid">
+
+        <div>
+          <p class="eyebrow">
+            Microsoft Azure · Google Cloud · Cloud Operations
+          </p>
+
+          <h1>Muthu Senthil S</h1>
+
+          <p class="hero-title">
+            Azure Infrastructure Engineer
+          </p>
+
+          <p class="hero-description">
+            5+ years of experience operating enterprise Azure and
+            Google Cloud infrastructure. Focused on reliable cloud
+            operations, PowerShell automation, security, cost
+            optimization and disaster recovery.
+          </p>
+
+          <div class="button-group">
+            <a
+              class="btn btn-primary"
+              href="mailto:muthusenthilshanmugam@gmail.com"
+            >
+              Email Me
+            </a>
+
+            <a
+              class="btn btn-outline"
+              href="https://www.linkedin.com/in/muthu-senthil-shanmugam-4492bb1b4/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+
+            <a class="btn btn-outline" href="#experience">
+              View Experience
+            </a>
+          </div>
+        </div>
+
+        <aside class="profile-card" aria-label="Current role">
+          <div class="avatar" aria-hidden="true">MS</div>
+
+          <h2>Senior Engineer</h2>
+
+          <p>Azure Cloud Infrastructure</p>
+          <p>LTIMindtree | Jul 2025 – Present</p>
+          <p>Coimbatore, India</p>
+
+          <div class="badges">
+            <span class="badge">Microsoft Azure</span>
+            <span class="badge">Google Cloud</span>
+            <span class="badge">PowerShell</span>
+          </div>
+        </aside>
+
+      </div>
+
+      <div class="stats-grid">
+
+        <div class="stat">
+          <strong>6,000+</strong>
+          <span>Azure VMs managed at HCLTech</span>
+        </div>
+
+        <div class="stat">
+          <strong>83</strong>
+          <span>Azure subscriptions at HCLTech</span>
+        </div>
+
+        <div class="stat">
+          <strong>100%</strong>
+          <span>SLA compliance at HCLTech</span>
+        </div>
+
+        <div class="stat">
+          <strong>~15%</strong>
+          <span>Infrastructure cost optimization contribution</span>
+        </div>
+
+      </div>
+
+      <p class="scope-note">
+        Enterprise-scale figures reflect my HCLTech experience.
+        Current LTIMindtree scope: 80+ VMs and 200+ resources
+        across 4 subscriptions.
       </p>
 
-      <p style="margin-top: 14px;">
-        Hands-on experience with Azure Virtual Machines, VNets, NSGs,
-        Azure Firewall, Application Gateway, Azure Bastion, Load Balancer,
-        Azure Backup, Recovery Services Vault, Azure Key Vault,
-        Azure Update Manager, DR/failover testing, Microsoft Entra ID,
-        Azure RBAC, Azure Policy and Cost Management.
-      </p>
-
-      <p style="margin-top: 14px;">
-        Automate routine operations with PowerShell and Azure Automation
-        runbooks, and contributed to approximately 15% infrastructure cost
-        optimization. Building DevOps skills through hands-on labs in
-        Azure DevOps Repos and Pipelines, Terraform, Docker and AKS.
-      </p>
     </div>
+  </header>
 
-    <!-- CURRENT ROLE -->
-    <div class="card">
-      <h3>Senior Engineer — Azure Cloud Infrastructure</h3>
-      <p class="meta">
-        LTIMindtree | Coimbatore | Jul 2025 – Present
-      </p>
+  <main id="main">
 
-      <ul class="clean">
-        <li>
-          Administer Azure production and non-production IaaS for 80+ VMs
-          and 200+ resources across 4 subscriptions, including Virtual
-          Machines, Managed Disks, Storage Accounts, Snapshots, VNets,
-          Subnets, VNet Peering, NSGs, Azure Firewall, Load Balancer
-          and Azure DNS.
-        </li>
-        <li>
-          Build PowerShell scripts and Azure Automation runbooks for VM
-          administration, disk operations, snapshots, health checks and
-          recurring tasks, reducing manual effort.
-        </li>
-        <li>
-          Manage Microsoft Entra ID, Azure RBAC and access reviews,
-          applying least-privilege and security-governance controls.
-        </li>
-        <li>
-          Run Azure Backup and Recovery Services Vault operations,
-          restoration tests and DR/failover exercises.
-        </li>
-        <li>
-          Resolve approximately 10 incidents per month, including P1/P2,
-          and convert RCA findings into automation or monitoring improvements.
-        </li>
-        <li>
-          Use Azure Monitor and Log Analytics to analyze alerts and logs
-          and validate post-deployment health.
-        </li>
-        <li>
-          Support CI/CD and release operations on Azure DevOps by validating
-          Azure infrastructure prerequisites, monitoring deployments and
-          troubleshooting environment and configuration issues with
-          application teams.
-        </li>
-        <li>
-          Maintain automation scripts and runbooks in Git under controlled
-          change and peer review.
-        </li>
-        <li>
-          Support Azure Policy, rightsizing and FinOps initiatives,
-          contributing to approximately 15% infrastructure cost optimization.
-        </li>
-        <li>
-          Build Infrastructure as Code skills through Terraform provisioning
-          labs covering providers, state, plan/apply, VNets, Subnets,
-          NSGs and VMs.
-        </li>
-      </ul>
-    </div>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
 
-    <!-- SENIOR ANALYST -->
-    <div class="card">
-      <h3>Senior Analyst — Cloud Infrastructure Operations</h3>
-      <p class="meta">
-        HCLTech | Bengaluru | Jan 2025 – Jun 2025
-      </p>
+        <p class="eyebrow">About Me</p>
+        <h2 class="section-title">
+          Reliable operations. Practical automation.
+        </h2>
+        <div class="section-line"></div>
 
-      <ul class="clean">
-        <li>
-          Operated enterprise Azure and GCP infrastructure 24×7 at
-          100% SLA compliance.
-        </li>
-        <li>
-          Managed 6,000+ Azure VMs across 83 subscriptions and approximately
-          10,000 cloud resources.
-        </li>
-        <li>
-          Automated disk cleanup and snapshot creation/deletion with
-          PowerShell, removing manual steps from recurring work.
-        </li>
-        <li>
-          Monitored infrastructure with Azure Monitor, Log Analytics and
-          GCP Operations Suite for alert response and proactive troubleshooting.
-        </li>
-        <li>
-          Processed 70+ service requests and approximately 15 incidents per
-          month, converting RCA findings into preventive fixes and automation.
-        </li>
-        <li>
-          Supported backup validation, restoration testing, DR/failover
-          exercises, cloud governance and resource optimization.
-        </li>
-      </ul>
-    </div>
+        <p class="section-intro">
+          I support enterprise cloud environments with a focus on
+          service availability, secure infrastructure and continuous
+          operational improvement. My background combines Azure and
+          GCP administration, incident resolution, automation and
+          disaster recovery, with ongoing hands-on development in
+          Azure DevOps, Terraform and AKS.
+        </p>
 
-    <!-- ANALYST -->
-    <div class="card">
-      <h3>Analyst — Azure Cloud Infrastructure Operations</h3>
-      <p class="meta">
-        HCLTech | Bengaluru | Oct 2021 – Jan 2025
-      </p>
+      </div>
+    </section>
 
-      <ul class="clean">
-        <li>
-          Administered Azure compute, storage, networking, firewall, DNS,
-          backup and recovery services across enterprise environments.
-        </li>
-        <li>
-          Provisioned, modified and decommissioned VMs with optimal configurations.
-        </li>
-        <li>
-          Delivered L2 support for P1–P4 incidents under ITSM and SLA controls
-          using ServiceNow, coordinating root cause analysis with Microsoft
-          and Google support.
-        </li>
-        <li>
-          Scheduled patching with Azure Update Management / Azure Update
-          Manager and used the PMC tool for runtime scheduling to reduce
-          operating costs.
-        </li>
-        <li>
-          Performed monthly cleanup of orphaned resources, recommended
-          reserved instances and savings plans, and carried out cost analysis
-          and estimation across Azure and GCP.
-        </li>
-        <li>
-          Configured Azure File Sync and Azure DNS, and worked on NSGs,
-          firewall policies and inter-cloud connectivity.
-        </li>
-        <li>
-          Performed security audits and IAM policy reviews, and rotated
-          Google Cloud service account keys.
-        </li>
-        <li>
-          Led technical DR activities in biannual exercises covering
-          backup validation, restoration and failover.
-        </li>
-        <li>
-          Wrote knowledge base articles, delivered knowledge-transfer
-          sessions and mentored junior team members.
-        </li>
-      </ul>
-    </div>
+    <!-- ALL RESUME DETAILS UNDER EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
 
-    <!-- TRAINEE -->
-    <div class="card">
-      <h3>Project Trainee — Cloud Operations</h3>
-      <p class="meta">
-        HCLTech | Bengaluru | May 2021 – Sep 2021
-      </p>
+        <p class="eyebrow">Professional Profile</p>
 
-      <ul class="clean">
-        <li>
-          Assisted with Azure infrastructure monitoring, administration,
-          incident resolution and service request fulfilment.
-        </li>
-        <li>
-          Created operational documentation and knowledge articles.
-        </li>
-      </ul>
-    </div>
+        <h2 class="section-title">
+          Experience & Qualifications
+        </h2>
 
-    <!-- CORE SKILLS -->
-    <div class="card">
-      <h3>Core Skills & Technical Expertise</h3>
+        <div class="section-line"></div>
 
-      <ul class="clean">
-        <li>
-          <strong>Cloud platforms:</strong>
-          Microsoft Azure, Google Cloud Platform (GCP), IaaS,
-          hybrid and multi-cloud, Azure Portal.
-        </li>
-        <li>
-          <strong>Compute:</strong>
-          Azure Virtual Machines — provisioning, resizing and
-          decommissioning; Managed Disks, Snapshots, VM lifecycle,
-          high availability, fault tolerance, scalability and capacity planning.
-        </li>
-        <li>
-          <strong>Networking:</strong>
-          VNets, Subnets, VNet Peering, NSGs, Azure Firewall,
-          Application Gateway, Azure Bastion, Azure Load Balancer,
-          Azure DNS, VPN, ExpressRoute, inter-cloud connectivity
-          and connectivity troubleshooting.
-        </li>
-        <li>
-          <strong>Storage and backup:</strong>
-          Storage Accounts, Azure File Sync, Azure Backup,
-          Recovery Services Vault, backup validation,
-          restoration testing and hybrid storage.
-        </li>
-        <li>
-          <strong>Identity and security:</strong>
-          Microsoft Entra ID, Azure RBAC, IAM, Azure Key Vault,
-          access reviews, least privilege, security audits,
-          key rotation and compliance.
-        </li>
-        <li>
-          <strong>Monitoring and operations:</strong>
-          Azure Monitor, Log Analytics, GCP Operations Suite,
-          alerting, L2 support, P1–P4 incident management,
-          RCA, SLA adherence, ServiceNow and ITSM.
-        </li>
-        <li>
-          <strong>Automation and IaC:</strong>
-          PowerShell, Azure Automation, Runbooks,
-          Azure Update Manager, Azure Update Management,
-          automation workflows and Terraform fundamentals.
-        </li>
-        <li>
-          <strong>Azure DevOps:</strong>
-          Azure Repos, Azure Pipelines, Git/GitHub, source control,
-          CI/CD concepts, release support, pipeline troubleshooting
-          and Infrastructure as Code.
-        </li>
-        <li>
-          <strong>Containers — learning:</strong>
-          Docker, container images, Azure Kubernetes Service (AKS)
-          fundamentals and deployment labs.
-        </li>
-        <li>
-          <strong>Governance and FinOps:</strong>
-          Azure Policy, Cost Management, rightsizing, reserved instances,
-          savings plans, orphaned-resource cleanup and PMC runtime scheduling.
-        </li>
-        <li>
-          <strong>Resilience:</strong>
-          BCDR, disaster recovery planning, failover testing
-          and business continuity.
-        </li>
-      </ul>
-    </div>
+        <!-- SUMMARY -->
+        <div class="card">
+          <h3>Professional Summary</h3>
 
-    <!-- CERTIFICATIONS -->
-    <div class="card">
-      <h3>Certifications</h3>
+          <p class="muted">
+            Azure Infrastructure Engineer with 5+ years of experience
+            running enterprise Microsoft Azure and Google Cloud IaaS
+            environments, including 6,000+ Azure VMs across 83
+            subscriptions and approximately 10,000 cloud resources
+            at 100% SLA compliance during my HCLTech tenure.
+          </p>
 
-      <ul class="clean">
-        <li>
-          Microsoft Certified: Azure Administrator Associate (AZ-104)
-        </li>
-        <li>
-          Microsoft Certified: Azure Fundamentals (AZ-900)
-        </li>
-        <li>
-          Google Cloud Certified: Professional Cloud DevOps Engineer
-        </li>
-      </ul>
-    </div>
+          <p class="muted">
+            Hands-on with Azure Virtual Machines, VNets, NSGs,
+            Azure Firewall, Application Gateway, Azure Bastion,
+            Load Balancer, Azure Backup, Recovery Services Vault,
+            Azure Key Vault, Azure Update Manager, DR/failover testing,
+            Microsoft Entra ID, Azure RBAC, Azure Policy and
+            Cost Management.
+          </p>
 
-    <!-- LEARNING -->
-    <div class="card">
-      <h3>Azure DevOps Learning — Hands-on Labs</h3>
-      <p class="meta">
-        Learning activities that complement my production cloud
-        infrastructure and operations experience.
-      </p>
+          <p class="muted">
+            Automate routine operations with PowerShell and Azure
+            Automation runbooks, and contributed to approximately
+            15% infrastructure cost optimization. Building DevOps
+            skills on Azure through hands-on labs in Azure DevOps
+            Repos and Pipelines, Terraform and AKS.
+          </p>
+        </div>
 
-      <ul class="clean">
-        <li>
-          <strong>Azure DevOps and Git:</strong>
-          Practice with Azure Repos, Pipelines and GitHub covering
-          source control, branching, CI/CD pipeline flow
-          and deployment troubleshooting.
-        </li>
-        <li>
-          <strong>Terraform on Azure:</strong>
-          Provisioning labs covering providers, state,
-          plan/apply workflows, VNets, Subnets, NSGs and Virtual Machines.
-        </li>
-        <li>
-          <strong>Containers on Azure:</strong>
-          Docker image builds and Azure Kubernetes Service
-          deployment labs.
-        </li>
-        <li>
-          <strong>Observability:</strong>
-          Azure Monitor and Log Analytics alerts and log analysis
-          to validate post-deployment health.
-        </li>
-      </ul>
-    </div>
+        <h3 class="subheading">Professional Experience</h3>
 
-    <!-- ACHIEVEMENTS -->
-    <div class="card">
-      <h3>Achievements & Recognition</h3>
+        <!-- LTIMINDTREE -->
+        <article class="card">
+          <div class="role-heading">
+            <h4>Senior Engineer — Azure Cloud Infrastructure</h4>
+            <span class="date">Jul 2025 – Present</span>
+          </div>
 
-      <ul class="clean">
-        <li>
-          Maintained 100% SLA compliance across 6,000+ Azure VMs
-          in 83 subscriptions at HCLTech.
-        </li>
-        <li>
-          Contributed to approximately 15% infrastructure cost optimization
-          through rightsizing, PMC runtime scheduling, orphaned-resource
-          cleanup, and reserved instance and savings plan recommendations.
-        </li>
-        <li>
-          Received client appreciation for resolving a complex
-          CrowdStrike issue.
-        </li>
-        <li>
-          Implemented a failover testing strategy for disaster
-          recovery readiness.
-        </li>
-        <li>
-          Earned Silver and Golden Jewel Awards for outstanding
-          performance at HCLTech.
-        </li>
-        <li>
-          Completed T2ID Academics in the GCP Cloud Platform.
-        </li>
-      </ul>
-    </div>
+          <p class="meta">LTIMindtree | Coimbatore</p>
 
-    <!-- EDUCATION -->
-    <div class="card">
-      <h3>Education</h3>
-      <p>
-        Bachelor of Engineering — Electronics and Communication Engineering
-      </p>
-      <p class="meta">
-        Dr. Mahalingam College of Engineering and Technology, Pollachi
-        <br>
-        2016 – 2020 | 78.6%
-      </p>
-    </div>
+          <ul class="clean">
+            <li>
+              Administer Azure production and non-production IaaS
+              for 80+ VMs and 200+ resources across 4 subscriptions:
+              Virtual Machines, Managed Disks, Storage Accounts,
+              Snapshots, VNets, Subnets, VNet Peering, NSGs,
+              Azure Firewall, Load Balancer and Azure DNS.
+            </li>
+            <li>
+              Build PowerShell scripts and Azure Automation runbooks
+              for VM administration, disk operations, snapshots,
+              health checks and recurring tasks, reducing manual effort.
+            </li>
+            <li>
+              Manage Microsoft Entra ID, Azure RBAC and access reviews,
+              applying least-privilege and security-governance controls.
+            </li>
+            <li>
+              Run Azure Backup and Recovery Services Vault operations,
+              restoration tests and DR/failover exercises.
+            </li>
+            <li>
+              Resolve approximately 10 incidents per month, including
+              P1/P2, and convert RCA findings into automation or
+              monitoring improvements.
+            </li>
+            <li>
+              Use Azure Monitor and Log Analytics to analyze alerts
+              and logs and validate post-deployment health.
+            </li>
+            <li>
+              Support CI/CD and release operations on Azure DevOps by
+              validating Azure infrastructure prerequisites, monitoring
+              deployments and troubleshooting environment and
+              configuration issues with application teams.
+            </li>
+            <li>
+              Keep automation scripts and runbooks in Git under
+              controlled change and peer review.
+            </li>
+            <li>
+              Support Azure Policy, rightsizing and FinOps work,
+              contributing to approximately 15% infrastructure
+              cost optimization.
+            </li>
+            <li>
+              Build Infrastructure as Code skills with Terraform
+              through Azure provisioning labs covering providers,
+              state, plan/apply, VNets, Subnets, NSGs and VMs.
+            </li>
+          </ul>
+        </article>
+
+        <!-- SENIOR ANALYST -->
+        <article class="card">
+          <div class="role-heading">
+            <h4>Senior Analyst — Cloud Infrastructure Operations</h4>
+            <span class="date">Jan 2025 – Jun 2025</span>
+          </div>
+
+          <p class="meta">HCLTech | Bengaluru</p>
+
+          <ul class="clean">
+            <li>
+              Operated enterprise Azure and GCP infrastructure
+              24×7 at 100% SLA compliance.
+            </li>
+            <li>
+              Managed 6,000+ Azure VMs across 83 subscriptions
+              and approximately 10,000 cloud resources.
+            </li>
+            <li>
+              Automated disk cleanup and snapshot creation/deletion
+              with PowerShell, removing manual steps from recurring work.
+            </li>
+            <li>
+              Monitored with Azure Monitor, Log Analytics and GCP
+              Operations Suite for alert response and proactive troubleshooting.
+            </li>
+            <li>
+              Processed 70+ service requests and approximately
+              15 incidents per month; converted RCA findings into
+              preventive fixes and automation.
+            </li>
+            <li>
+              Supported backup validation, restoration testing,
+              DR/failover exercises, cloud governance and
+              resource optimization.
+            </li>
+          </ul>
+        </article>
+
+        <!-- ANALYST -->
+        <article class="card">
+          <div class="role-heading">
+            <h4>Analyst — Azure Cloud Infrastructure Operations</h4>
+            <span class="date">Oct 2021 – Jan 2025</span>
+          </div>
+
+          <p class="meta">HCLTech | Bengaluru</p>
+
+          <ul class="clean">
+            <li>
+              Administered Azure compute, storage, networking,
+              firewall, DNS, backup and recovery services across
+              enterprise environments; provisioned, modified and
+              decommissioned VMs with optimal configurations.
+            </li>
+            <li>
+              Delivered L2 support for P1–P4 incidents under ITSM
+              and SLA controls using ServiceNow, coordinating
+              root cause analysis with Microsoft and Google support.
+            </li>
+            <li>
+              Scheduled patching with Azure Update Management /
+              Azure Update Manager and used the PMC tool for
+              runtime scheduling to reduce operating costs.
+            </li>
+            <li>
+              Ran monthly cleanup of orphaned resources, recommended
+              reserved instances and savings plans, and carried out
+              cost analysis and estimation across Azure and GCP.
+            </li>
+            <li>
+              Configured Azure File Sync and Azure DNS, and worked
+              on NSGs, firewall policies and inter-cloud connectivity.
+            </li>
+            <li>
+              Performed security audits and IAM policy reviews,
+              and rotated Google Cloud service account keys.
+            </li>
+            <li>
+              Led technical DR activities in biannual exercises
+              covering backup validation, restoration and failover.
+            </li>
+            <li>
+              Wrote knowledge base articles, delivered
+              knowledge-transfer sessions and mentored junior
+              team members.
+            </li>
+          </ul>
+        </article>
+
+        <!-- TRAINEE -->
+        <article class="card">
+          <div class="role-heading">
+            <h4>Project Trainee — Cloud Operations</h4>
+            <span class="date">May 2021 – Sep 2021</span>
+          </div>
+
+          <p class="meta">HCLTech | Bengaluru</p>
+
+          <ul class="clean">
+            <li>
+              Assisted with Azure infrastructure monitoring,
+              administration, incident resolution and service
+              request fulfilment.
+            </li>
+            <li>
+              Created operational documentation and knowledge articles.
+            </li>
+          </ul>
+        </article>
+
+        <!-- CORE SKILLS -->
+        <h3 class="subheading" id="skills">
+          Core Skills & Technical Expertise
+        </h3>
+
+        <div class="grid-2">
+
+          <article class="card skill-card">
+            <h4>Cloud Platforms</h4>
+            <div class="badges">
+              <span class="badge">Microsoft Azure</span>
+              <span class="badge">Google Cloud Platform</span>
+              <span class="badge">IaaS</span>
+              <span class="badge">Hybrid & Multi-cloud</span>
+              <span class="badge">Azure Portal</span>
+            </div>
+          </article>
+
+          <article class="card skill-card">
+            <h4>Compute</h4>
+            <div class="badges">
+              <span class="badge">Azure Virtual Machines</span>
+              <span class="badge">Provisioning & Resizing</span>
+              <span class="badge">VM Decommissioning</span>
+              <span class="badge">Managed Disks</span>
+              <span class="badge">Snapshots</span>
+              <span class="badge">VM Lifecycle</span>
+              <span class="badge">High Availability</span>
+              <span class="badge">Fault Tolerance</span>
+              <span class="badge">Scalability</span>
+              <span class="badge">Capacity Planning</span>
+            </div>
+          </article>
+
+          <article class="card skill-card">
+            <h4>Networking</h4>
+            <div class="badges">
+              <span class="badge">VNets & Subnets</span>
+              <span class="badge">VNet Peering</span>
+              <span class="badge">NSGs</span>
+              <span class="badge">Azure Firewall</span>
+              <span class="badge">Application Gateway</span>
+              <span class="badge">Azure Bastion</span>
+              <span class="badge">Azure Load Balancer</span>
+              <span class="badge">Azure DNS</span>
+              <span class="badge">VPN</span>
+              <span class="badge">ExpressRoute</span>
+              <span class="badge">Inter-cloud Connectivity</span>
+              <span class="badge">Connectivity Troubleshooting</span>
+            </div>
+          </article>
+
+          <article class="card skill-card">
+            <h4>Storage & Backup</h4>
+            <div class="badges">
+              <span class="badge">Storage Accounts</span>
+              <span class="badge">Azure File Sync</span>
+              <span class="badge">Azure Backup</span>
+              <span class="badge">Recovery Services Vault</span>
+              <span class="badge">Backup Validation</span>
+              <span class="badge">Restoration Testing</span>
+              <span class="badge">Hybrid Storage</span>
+            </div>
+          </article>
+
+          <article class="card skill-card">
+            <h4>Identity & Security</h4>
+            <div class="badges">
+              <span class="badge">Microsoft Entra ID</span>
+              <span class="badge">Azure RBAC</span>
+              <span class="badge">IAM</span>
+              <span class="badge">Azure Key Vault</span>
+              <span class="badge">Access Reviews</span>
+              <span class="badge">Least Privilege</span>
+              <span class="badge">Security Audits</span>
+              <span class="badge">Key Rotation</span>
+              <span class="badge">Compliance</span>
+            </div>
+          </article>
+
+          <article class="card skill-card">
+            <h4>Monitoring & Operations</h4>
+            <div class="badges">
+              <span class="badge">Azure Monitor</span>
+              <span class="badge">Log Analytics</span>
+              <span class="badge">GCP Operations Suite</span>
+              <span class="badge">Alerting</span>
+              <span class="badge">L2 Support</span>
+              <span class="badge">P1–P4 Incident Management</span>
+              <span class="badge">RCA</span>
+              <span class="badge">SLA Adherence</span>
+              <span class="badge">ServiceNow</span>
+              <span class="badge">ITSM</span>
+            </div>
+          </article>
+
+          <article class="card skill-card">
+            <h4>Automation</h4>
+            <div class="badges">
+              <span class="badge">PowerShell</span>
+              <span class="badge">Azure Automation</span>
+              <span class="badge">Runbooks</span>
+              <span class="badge">Azure Update Manager</span>
+              <span class="badge">Azure Update Management</span>
+              <span class="badge">Patch Management</span>
+              <span class="badge">Automation Workflows</span>
+            </div>
+          </article>
+
+          <article class="card skill-card">
+            <h4>DevOps & IaC — Developing Skills</h4>
+            <div class="badges">
+              <span class="badge">Azure DevOps Repos</span>
+              <span class="badge">Azure Pipelines</span>
+              <span class="badge">Git/GitHub</span>
+              <span class="badge">Source Control</span>
+              <span class="badge">CI/CD Concepts</span>
+              <span class="badge">Release Support</span>
+              <span class="badge">Pipeline Troubleshooting</span>
+              <span class="badge">Terraform Fundamentals</span>
+              <span class="badge">Infrastructure as Code</span>
+            </div>
+          </article>
+
+          <article class="card skill-card">
+            <h4>Containers — Learning</h4>
+            <div class="badges">
+              <span class="badge">Docker</span>
+              <span class="badge">Container Images</span>
+              <span class="badge">AKS Fundamentals</span>
+              <span class="badge">Deployment Labs</span>
+            </div>
+          </article>
+
+          <article class="card skill-card">
+            <h4>Governance & FinOps</h4>
+            <div class="badges">
+              <span class="badge">Azure Policy</span>
+              <span class="badge">Cost Management</span>
+              <span class="badge">Rightsizing</span>
+              <span class="badge">Reserved Instances</span>
+              <span class="badge">Savings Plans</span>
+              <span class="badge">Orphaned-resource Cleanup</span>
+              <span class="badge">PMC Runtime Scheduling</span>
+            </div>
+          </article>
+
+          <article class="card skill-card">
+            <h4>Resilience</h4>
+            <div class="badges">
+              <span class="badge">BCDR</span>
+              <span class="badge">Disaster Recovery Planning</span>
+              <span class="badge">Failover Testing</span>
+              <span class="badge">Business Continuity</span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <h3 class="subheading" id="certifications">
+          Certifications
+        </h3>
+
+        <div class="certification-grid">
+
+          <article class="card">
+            <div class="cert-code">AZ-104</div>
+            <h4>Azure Administrator Associate</h4>
+            <p class="muted">Microsoft Certified</p>
+          </article>
+
+          <article class="card">
+            <div class="cert-code">AZ-900</div>
+            <h4>Azure Fundamentals</h4>
+            <p class="muted">Microsoft Certified</p>
+          </article>
+
+          <article class="card">
+            <div class="cert-code">Google Cloud</div>
+            <h4>Professional Cloud DevOps Engineer</h4>
+            <p class="muted">Google Cloud Certified</p>
+          </article>
+
+        </div>
+
+        <!-- HANDS-ON LEARNING -->
+        <h3 class="subheading">
+          Azure DevOps Learning & Hands-on Labs
+        </h3>
+
+        <p class="lab-note">
+          These learning activities complement my production cloud
+          infrastructure experience and are not presented as
+          production project ownership.
+        </p>
+
+        <div class="grid-2">
+
+          <article class="card">
+            <p class="eyebrow">Hands-on Learning</p>
+            <h4>Azure DevOps & Git</h4>
+            <p class="muted">
+              Practice with Azure Repos, Pipelines and GitHub covering
+              source control, branching, CI/CD pipeline flow
+              and deployment troubleshooting.
+            </p>
+          </article>
+
+          <article class="card">
+            <p class="eyebrow">Hands-on Learning</p>
+            <h4>Terraform on Azure</h4>
+            <p class="muted">
+              Provisioning labs covering providers, state,
+              plan/apply workflows, VNets, Subnets, NSGs
+              and Virtual Machines.
+            </p>
+          </article>
+
+          <article class="card">
+            <p class="eyebrow">Hands-on Learning</p>
+            <h4>Containers on Azure</h4>
+            <p class="muted">
+              Docker image builds and Azure Kubernetes Service
+              deployment labs.
+            </p>
+          </article>
+
+          <article class="card">
+            <p class="eyebrow">Hands-on Learning</p>
+            <h4>Observability</h4>
+            <p class="muted">
+              Azure Monitor and Log Analytics alerts and log analysis
+              used to validate post-deployment health.
+            </p>
+          </article>
+
+        </div>
+
+        <!-- ACHIEVEMENTS -->
+        <h3 class="subheading">Achievements & Recognition</h3>
+
+        <div class="card">
+          <ul class="clean">
+            <li>
+              Maintained 100% SLA compliance across 6,000+ Azure VMs
+              in 83 subscriptions at HCLTech.
+            </li>
+            <li>
+              Contributed to approximately 15% infrastructure cost
+              optimization through rightsizing, PMC runtime scheduling,
+              orphaned-resource cleanup, and reserved instance and
+              savings plan recommendations.
+            </li>
+            <li>
+              Received client appreciation for resolving a complex
+              CrowdStrike issue.
+            </li>
+            <li>
+              Implemented a failover testing strategy for disaster
+              recovery readiness.
+            </li>
+            <li>
+              Earned Silver and Golden Jewel Awards for outstanding
+              performance at HCLTech.
+            </li>
+            <li>
+              Completed T2ID Academics in the GCP Cloud Platform.
+            </li>
+          </ul>
+        </div>
+
+        <!-- EDUCATION -->
+        <h3 class="subheading">Education</h3>
+
+        <div class="card">
+          <h4>Bachelor of Engineering</h4>
+
+          <p>Electronics and Communication Engineering</p>
+
+          <p class="muted">
+            Dr. Mahalingam College of Engineering and Technology,
+            Pollachi
+          </p>
+
+          <div class="badges" style="margin-top: 16px;">
+            <span class="badge">2016 – 2020</span>
+            <span class="badge">78.6%</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <!-- CONTACT -->
-    <div class="card">
-      <h3>Contact Details</h3>
+    <section id="contact">
+      <div class="container">
 
-      <ul class="clean">
-        <li>Muthu Senthil S | Azure Infrastructure Engineer</li>
-        <li>Coimbatore, India</li>
-        <li>
-          Email:
+        <p class="eyebrow">Get in Touch</p>
+        <h2 class="section-title">Let’s Connect</h2>
+        <div class="section-line"></div>
+
+        <p class="section-intro">
+          For professional conversations about Azure infrastructure,
+          cloud operations and automation.
+        </p>
+
+        <div class="contact-grid">
+
           <a
+            class="contact-item"
             href="mailto:muthusenthilshanmugam@gmail.com"
-            style="color: var(--accent); overflow-wrap: anywhere;"
-          >muthusenthilshanmugam@gmail.com</a>
-        </li>
-        <li>
-          Phone:
-          <a href="tel:+918098707163" style="color: var(--accent);">
-            +91 8098707163
+          >
+            <span class="contact-label">Email</span>
+            <span class="contact-value">
+              muthusenthilshanmugam@gmail.com
+            </span>
           </a>
-        </li>
-        <li>
+
+          <a class="contact-item" href="tel:+918098707163">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">+91 8098707163</span>
+          </a>
+
           <a
+            class="contact-item"
             href="https://www.linkedin.com/in/muthu-senthil-shanmugam-4492bb1b4/"
             target="_blank"
             rel="noopener noreferrer"
-            style="color: var(--accent);"
-          >LinkedIn — Muthu Senthil Shanmugam</a>
-        </li>
-      </ul>
-    </div>
+          >
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">
+              Muthu Senthil Shanmugam
+            </span>
+          </a>
 
-  </div>
-</section>
+          <div class="contact-item">
+            <span class="contact-label">Location</span>
+            <span class="contact-value">Coimbatore, India</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+
+      <p>
+        © <span id="year">2026</span> Muthu Senthil S.
+        All rights reserved.
+      </p>
+
+      <a href="#home">Back to top ↑</a>
+
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
