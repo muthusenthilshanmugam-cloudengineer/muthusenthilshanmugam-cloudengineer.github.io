@@ -1,18 +1,393 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Muthu Senthil S — Azure Infrastructure Engineer in Coimbatore. Enterprise Azure and GCP operations, PowerShell automation, cloud security and disaster recovery.">
-<meta name="theme-color" content="#0a1020"><title>Muthu Senthil S | Azure Infrastructure Engineer</title>
-<style>
-:root{color-scheme:dark;--bg:#0a1020;--panel:#111c30;--text:#e9eff9;--muted:#b0bdd0;--line:#26354d;--blue:#72d2ff;--mint:#7ce9c2}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--blue);text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:3px solid var(--mint);outline-offset:5px}.wrap{width:min(1140px,90%);margin:auto}.skip{position:absolute;top:-100px;left:12px;background:var(--panel);padding:10px;z-index:100}.skip:focus{top:10px}nav{position:sticky;top:0;z-index:10;background:rgba(10,16,32,.96);border-bottom:1px solid var(--line)}.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 0}.brand{font-weight:800;color:var(--text);text-decoration:none;white-space:nowrap}.nav-links{display:flex;gap:18px;flex-wrap:wrap}.nav-links a{text-decoration:none;color:var(--muted);font-size:14px}.nav-links a:hover{color:var(--blue)}.hero{padding:88px 0 64px;background:radial-gradient(ellipse at 85% 10%,#16334c 0,transparent 56%)}.hero-grid{display:grid;grid-template-columns:1.7fr 1fr;gap:48px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.13em;color:var(--mint);font-size:12px;font-weight:750;margin:0 0 10px}h1{font-size:clamp(40px,6vw,70px);line-height:1.08;letter-spacing:-.045em;margin:0 0 20px}h2{font-size:clamp(27px,4vw,36px);line-height:1.25;letter-spacing:-.025em;margin:0 0 18px}h3{font-size:19px;line-height:1.4;margin:0 0 12px}p{margin:0 0 16px}.headline{font-size:clamp(20px,3vw,28px);color:var(--blue);line-height:1.4}.intro{color:var(--muted);max-width:680px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.button{display:inline-block;padding:11px 20px;border:1px solid var(--blue);border-radius:9px;text-decoration:none;font-weight:700}.primary{background:var(--blue);color:#071626}.secondary{color:var(--blue)}.profile{background:linear-gradient(145deg,#172b43,#111c30);border:1px solid var(--line);border-radius:20px;padding:32px;text-align:center}.avatar{display:grid;place-items:center;width:110px;height:110px;margin:0 auto 24px;background:linear-gradient(135deg,var(--blue),var(--mint));color:#0a1020;font-size:36px;font-weight:850;border-radius:30px}.profile p{color:var(--muted);font-size:14px}.profile .tags{justify-content:center}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}.stat{background:#101c2e;border:1px solid var(--line);border-radius:13px;padding:19px}.stat strong{display:block;color:var(--blue);font-size:27px;line-height:1.4}.stat span{display:block;color:var(--muted);font-size:13px}.scope{font-size:12px;color:var(--muted);margin-top:12px}section{padding:55px 0;border-top:1px solid var(--line)}.section-intro{color:var(--muted);max-width:800px;margin-bottom:25px}.card{padding:25px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.card p{color:var(--muted)}.card p.eyebrow{color:var(--mint)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tags span{font-size:12px;line-height:1.5;padding:6px 10px;background:#172a40;border:1px solid #29445e;border-radius:7px;color:#c8e9fc}.role{margin-bottom:20px}.role-head{display:flex;justify-content:space-between;gap:22px;margin-bottom:16px}.date{color:var(--muted);white-space:nowrap;font-size:13px}ul{padding-left:21px;margin:0}li{padding-left:4px;color:var(--muted);margin:0 0 10px}li:last-child{margin-bottom:0}li::marker{color:var(--blue)}.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.cert-code{font-size:25px;color:var(--blue);font-weight:800;margin-bottom:12px}.certs .card p{font-size:14px;margin:0}.contact{display:grid;grid-template-columns:1fr 1fr;gap:24px}.contact-links{display:grid;gap:14px}.contact-links a{overflow-wrap:anywhere}.label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em;display:block}.note{font-size:13px;color:var(--muted)}footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}@media(max-width:850px){.hero-grid{grid-template-columns:1fr}.profile{max-width:450px}.stats{grid-template-columns:repeat(2,1fr)}.certs{grid-template-columns:1fr}.nav-inner{display:block}.nav-links{margin-top:10px;gap:13px}.hero{padding-top:50px}.role-head{display:block}.date{display:block;margin-top:8px}}@media(max-width:580px){.grid,.contact{grid-template-columns:1fr}.card{padding:20px}.nav-links a{font-size:12px}.stats{gap:10px}.stat{padding:15px}section{padding:40px 0}.hero-grid{gap:28px}html{scroll-padding-top:145px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{nav,.buttons,.skip{display:none}body{background:white;color:black;font-size:11px}.hero,section{padding:15px 0;background:none}.card,.stat,.profile{background:white;color:black;break-inside:avoid}p,li,.card p,.intro,.date,.section-intro,.stat span{color:#333}.wrap{width:100%}h1{font-size:32px}h2{font-size:23px}a{color:#164d70}}
-</style></head><body><a class="skip" href="#main">Skip to content</a>
-<nav aria-label="Main navigation"><div class="wrap nav-inner"><a class="brand" href="#home">Muthu Senthil S<span style="color:var(--blue)">.</span></a><div class="nav-links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#learning">Labs</a><a href="#contact">Contact</a></div></div></nav>
-<header class="hero" id="home"><div class="wrap"><div class="hero-grid"><div><p class="eyebrow">Azure · Google Cloud · Infrastructure Operations</p><h1>Muthu Senthil S</h1><p class="headline">Azure Infrastructure Engineer</p><p class="intro">5+ years of experience running enterprise Azure and Google Cloud IaaS environments. Focused on reliable operations, PowerShell automation, secure infrastructure and disaster recovery—while building Azure DevOps, Terraform and AKS skills through hands-on labs.</p><div class="buttons"><a class="button primary" href="mailto:muthusenthilshanmugam@gmail.com">Get in touch</a><a class="button secondary" href="https://www.linkedin.com/in/muthu-senthil-shanmugam-4492bb1b4/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="button secondary" href="#experience">View experience</a></div></div><aside class="profile" aria-label="Profile summary"><div class="avatar" aria-hidden="true">MS</div><h3>Senior Engineer</h3><p>Azure Cloud Infrastructure<br>LTIMindtree · Jul 2025 – Present</p><div class="tags"><span>Coimbatore, India</span><span>Azure & GCP</span></div></aside></div><div class="stats"><div class="stat"><strong>6,000+</strong><span>Azure VMs managed at HCLTech</span></div><div class="stat"><strong>83</strong><span>Azure subscriptions at HCLTech</span></div><div class="stat"><strong>100%</strong><span>SLA compliance at HCLTech</span></div><div class="stat"><strong>~15%</strong><span>Infrastructure cost optimization contribution</span></div></div><p class="scope">Enterprise-scale figures reflect the HCLTech role; current LTIMindtree scope is 80+ VMs and 200+ resources across 4 subscriptions.</p></div></header>
-<main id="main"><section id="about"><div class="wrap"><p class="eyebrow">Profile</p><h2>Reliable cloud operations. Practical automation.</h2><div class="card"><p>I operate and support enterprise Microsoft Azure and Google Cloud infrastructure, covering compute, networking, storage, identity, security, monitoring, backup and disaster recovery. My experience combines L2 incident response, SLA-driven service delivery and proactive infrastructure improvements.</p><p>I automate recurring work with PowerShell and Azure Automation runbooks, support release operations with application teams, and contribute to governance and FinOps initiatives. My production operations experience is complemented by structured hands-on learning in Azure DevOps, Terraform, Docker and AKS.</p><p style="margin-bottom:0">Based in Coimbatore, India. Currently Senior Engineer, Azure Cloud Infrastructure at LTIMindtree.</p></div></div></section>
-<section id="experience"><div class="wrap"><p class="eyebrow">Professional journey</p><h2>Experience</h2><article class="card role"><div class="role-head"><div><p class="eyebrow">LTIMindtree · Coimbatore</p><h3>Senior Engineer, Azure Cloud Infrastructure</h3></div><span class="date">Jul 2025 – Present</span></div><ul><li>Administer production and non-production Azure IaaS for 80+ VMs and 200+ resources across 4 subscriptions, covering compute, disks, storage, snapshots, networking, firewall, load balancing and DNS.</li><li>Build PowerShell scripts and Azure Automation runbooks for VM administration, disk operations, snapshots, health checks and recurring tasks to reduce manual effort.</li><li>Manage Microsoft Entra ID, Azure RBAC and access reviews using least-privilege and security-governance controls.</li><li>Run Azure Backup and Recovery Services Vault operations, restoration tests and DR/failover exercises. Resolve about 10 incidents per month, including P1/P2, and turn RCA findings into automation or monitoring improvements.</li><li>Analyze alerts and logs with Azure Monitor and Log Analytics, and validate post-deployment health.</li><li>Support Azure DevOps CI/CD and releases by validating infrastructure prerequisites, monitoring deployments and troubleshooting environment and configuration issues with application teams.</li><li>Maintain scripts and runbooks in Git with controlled changes and peer review.</li><li>Support Azure Policy, rightsizing and FinOps initiatives, contributing to approximately 15% infrastructure cost optimization.</li><li>Build Terraform skills through Azure provisioning labs covering providers, state, plan/apply, VNets, Subnets, NSGs and VMs.</li></ul></article><article class="card role"><div class="role-head"><div><p class="eyebrow">HCLTech · Bengaluru</p><h3>Senior Analyst, Cloud Infrastructure Operations</h3></div><span class="date">Jan 2025 – Jun 2025</span></div><ul><li>Operated enterprise Azure and GCP infrastructure 24×7 with 100% SLA compliance.</li><li>Managed 6,000+ Azure VMs across 83 subscriptions and approximately 10,000 cloud resources.</li><li>Automated disk cleanup and snapshot creation/deletion with PowerShell, removing manual steps from recurring work.</li><li>Used Azure Monitor, Log Analytics and GCP Operations Suite for alert response and proactive troubleshooting.</li><li>Processed 70+ service requests and about 15 incidents per month, translating RCA findings into preventive fixes and automation.</li><li>Supported backup validation, restoration testing, DR/failover exercises, cloud governance and resource optimization.</li></ul></article><article class="card role"><div class="role-head"><div><p class="eyebrow">HCLTech · Bengaluru</p><h3>Analyst, Azure Cloud Infrastructure Operations</h3></div><span class="date">Oct 2021 – Jan 2025</span></div><ul><li>Administered Azure compute, storage, networking, firewall, DNS, backup and recovery; provisioned, modified and decommissioned VMs.</li><li>Delivered L2 support for P1–P4 incidents using ServiceNow and ITSM/SLA controls, coordinating RCA with Microsoft and Google support.</li><li>Scheduled patching with Azure Update Management / Azure Update Manager and used PMC runtime scheduling to reduce operating costs.</li><li>Performed monthly orphaned-resource cleanup, cost analysis and estimation; recommended reserved instances and savings plans across Azure and GCP.</li><li>Configured Azure File Sync and Azure DNS, and supported NSGs, firewall policies and inter-cloud connectivity.</li><li>Performed security audits and IAM policy reviews, including Google Cloud service-account key rotation.</li><li>Led technical DR activities in biannual exercises covering backup validation, restoration and failover.</li><li>Wrote knowledge articles, delivered knowledge-transfer sessions and mentored junior team members.</li></ul></article><article class="card role"><div class="role-head"><div><p class="eyebrow">HCLTech · Bengaluru</p><h3>Project Trainee, Cloud Operations</h3></div><span class="date">May 2021 – Sep 2021</span></div><ul><li>Assisted with Azure infrastructure monitoring, administration, incident resolution and service-request fulfilment.</li><li>Created operational documentation and knowledge articles.</li></ul></article></div></section>
-<section id="skills"><div class="wrap"><p class="eyebrow">Core capabilities</p><h2>Technical skills</h2><p class="section-intro">Enterprise cloud operations and automation, with developing DevOps and container skills explicitly identified below.</p><div class="grid"><article class="card"><h3>Cloud platforms</h3><div class="tags"><span>Microsoft Azure</span><span>Google Cloud Platform (GCP)</span><span>IaaS</span><span>Hybrid &amp; multi-cloud</span><span>Azure Portal</span></div></article><article class="card"><h3>Compute</h3><div class="tags"><span>Azure Virtual Machines</span><span>Managed Disks</span><span>Snapshots</span><span>VM lifecycle</span><span>High availability</span><span>Fault tolerance</span><span>Scalability</span><span>Capacity planning</span></div></article><article class="card"><h3>Networking</h3><div class="tags"><span>VNets &amp; Subnets</span><span>VNet Peering</span><span>NSGs</span><span>Azure Firewall</span><span>Application Gateway</span><span>Azure Bastion</span><span>Azure Load Balancer</span><span>Azure DNS</span><span>VPN</span><span>ExpressRoute</span><span>Inter-cloud connectivity</span><span>Connectivity troubleshooting</span></div></article><article class="card"><h3>Storage &amp; backup</h3><div class="tags"><span>Storage Accounts</span><span>Azure File Sync</span><span>Azure Backup</span><span>Recovery Services Vault</span><span>Backup validation</span><span>Restoration testing</span><span>Hybrid storage</span></div></article><article class="card"><h3>Identity &amp; security</h3><div class="tags"><span>Microsoft Entra ID</span><span>Azure RBAC</span><span>IAM</span><span>Azure Key Vault</span><span>Access reviews</span><span>Least privilege</span><span>Security audits</span><span>Key rotation</span><span>Compliance</span></div></article><article class="card"><h3>Monitoring &amp; operations</h3><div class="tags"><span>Azure Monitor</span><span>Log Analytics</span><span>GCP Operations Suite</span><span>Alerting</span><span>L2 support</span><span>P1–P4 incidents</span><span>RCA</span><span>SLA adherence</span><span>ServiceNow</span><span>ITSM</span></div></article><article class="card"><h3>Automation</h3><div class="tags"><span>PowerShell</span><span>Azure Automation</span><span>Runbooks</span><span>Azure Update Manager</span><span>Azure Update Management</span><span>Automation workflows</span></div></article><article class="card"><h3>Governance &amp; FinOps</h3><div class="tags"><span>Azure Policy</span><span>Cost Management</span><span>Rightsizing</span><span>Reserved instances</span><span>Savings plans</span><span>Orphaned-resource cleanup</span><span>PMC runtime scheduling</span></div></article><article class="card"><h3>Resilience</h3><div class="tags"><span>BCDR</span><span>Disaster recovery planning</span><span>Failover testing</span><span>Business continuity</span></div></article><article class="card"><h3>DevOps &amp; IaC — building proficiency</h3><div class="tags"><span>Azure DevOps Repos &amp; Pipelines</span><span>Git/GitHub</span><span>Source control</span><span>CI/CD concepts</span><span>Release support</span><span>Pipeline troubleshooting</span><span>Terraform fundamentals</span><span>Infrastructure as Code</span></div></article><article class="card"><h3>Containers — learning</h3><div class="tags"><span>Docker</span><span>Container images</span><span>AKS fundamentals</span><span>Deployment labs</span></div></article></div></div></section>
-<section id="certifications"><div class="wrap"><p class="eyebrow">Credentials</p><h2>Certifications</h2><div class="certs"><article class="card"><div class="cert-code">AZ-104</div><h3>Azure Administrator Associate</h3><p>Microsoft Certified</p></article><article class="card"><div class="cert-code">AZ-900</div><h3>Azure Fundamentals</h3><p>Microsoft Certified</p></article><article class="card"><div class="cert-code">Google Cloud</div><h3>Professional Cloud DevOps Engineer</h3><p>Google Cloud Certified</p></article></div></div></section>
-<section id="learning"><div class="wrap"><p class="eyebrow">Continuous development</p><h2>Azure DevOps learning & hands-on labs</h2><p class="section-intro">These are learning activities, not claims of production project ownership. They extend my Azure infrastructure and operations background.</p><div class="grid"><article class="card"><p class="eyebrow">Hands-on learning</p><h3>Azure DevOps &amp; Git</h3><p>Hands-on practice with Azure Repos, Pipelines and GitHub: source control, branching, CI/CD pipeline flow and deployment troubleshooting.</p></article><article class="card"><p class="eyebrow">Hands-on learning</p><h3>Terraform on Azure</h3><p>Provisioning labs covering providers, state, plan/apply workflows, VNets, Subnets, NSGs and Virtual Machines.</p></article><article class="card"><p class="eyebrow">Hands-on learning</p><h3>Containers on Azure</h3><p>Learning Docker image builds and Azure Kubernetes Service deployment through hands-on labs.</p></article><article class="card"><p class="eyebrow">Hands-on learning</p><h3>Observability</h3><p>Practice with Azure Monitor and Log Analytics alerts and log analysis to validate post-deployment health.</p></article></div></div></section>
-<section id="achievements"><div class="wrap"><p class="eyebrow">Impact & recognition</p><h2>Achievements</h2><div class="card"><ul><li>Maintained 100% SLA compliance across 6,000+ Azure VMs in 83 subscriptions at HCLTech.</li><li>Contributed to approximately 15% infrastructure cost optimization through rightsizing, runtime scheduling, orphaned-resource cleanup and reserved instance / savings plan recommendations.</li><li>Received client appreciation for resolving a complex CrowdStrike issue.</li><li>Implemented a failover testing strategy for disaster recovery readiness.</li><li>Earned Silver and Golden Jewel Awards for outstanding performance at HCLTech.</li><li>Completed T2ID Academics in the GCP Cloud Platform.</li></ul></div></div></section>
-<section id="education"><div class="wrap"><p class="eyebrow">Education</p><h2>Bachelor of Engineering</h2><div class="card"><h3>Electronics and Communication Engineering</h3><p>Dr. Mahalingam College of Engineering and Technology, Pollachi</p><div class="tags"><span>2016 – 2020</span><span>78.6%</span></div></div></div></section>
-<section id="contact"><div class="wrap contact"><div><p class="eyebrow">Contact</p><h2>Let’s connect.</h2><p class="section-intro">For professional conversations about Azure infrastructure, cloud operations and automation.</p><p>Coimbatore, India</p></div><div class="card contact-links"><div><span class="label">Email</span><a href="mailto:muthusenthilshanmugam@gmail.com">muthusenthilshanmugam@gmail.com</a></div><div><span class="label">Phone</span><a href="tel:+918098707163">+91 8098707163</a></div><div><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/muthu-senthil-shanmugam-4492bb1b4/" target="_blank" rel="noopener noreferrer">Muthu Senthil Shanmugam ↗</a></div></div></div></section></main>
-<footer><div class="wrap footer-inner"><span>© <span id="year">2026</span> Muthu Senthil S</span><a href="#home">Back to top ↑</a></div></footer><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body></html>
+<section id="experience">
+  <div class="container">
+
+    <h2 class="section-title">Experience & Professional Profile</h2>
+    <div class="section-line"></div>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <div class="card">
+      <h3>Professional Summary</h3>
+      <p class="meta">Azure Infrastructure Engineer | Coimbatore, India</p>
+
+      <p>
+        Azure Infrastructure Engineer with 5+ years of experience running
+        enterprise Microsoft Azure and Google Cloud IaaS environments,
+        including 6,000+ Azure VMs across 83 subscriptions and approximately
+        10,000 cloud resources at 100% SLA compliance during my HCLTech tenure.
+      </p>
+
+      <p style="margin-top: 14px;">
+        Hands-on experience with Azure Virtual Machines, VNets, NSGs,
+        Azure Firewall, Application Gateway, Azure Bastion, Load Balancer,
+        Azure Backup, Recovery Services Vault, Azure Key Vault,
+        Azure Update Manager, DR/failover testing, Microsoft Entra ID,
+        Azure RBAC, Azure Policy and Cost Management.
+      </p>
+
+      <p style="margin-top: 14px;">
+        Automate routine operations with PowerShell and Azure Automation
+        runbooks, and contributed to approximately 15% infrastructure cost
+        optimization. Building DevOps skills through hands-on labs in
+        Azure DevOps Repos and Pipelines, Terraform, Docker and AKS.
+      </p>
+    </div>
+
+    <!-- CURRENT ROLE -->
+    <div class="card">
+      <h3>Senior Engineer — Azure Cloud Infrastructure</h3>
+      <p class="meta">
+        LTIMindtree | Coimbatore | Jul 2025 – Present
+      </p>
+
+      <ul class="clean">
+        <li>
+          Administer Azure production and non-production IaaS for 80+ VMs
+          and 200+ resources across 4 subscriptions, including Virtual
+          Machines, Managed Disks, Storage Accounts, Snapshots, VNets,
+          Subnets, VNet Peering, NSGs, Azure Firewall, Load Balancer
+          and Azure DNS.
+        </li>
+        <li>
+          Build PowerShell scripts and Azure Automation runbooks for VM
+          administration, disk operations, snapshots, health checks and
+          recurring tasks, reducing manual effort.
+        </li>
+        <li>
+          Manage Microsoft Entra ID, Azure RBAC and access reviews,
+          applying least-privilege and security-governance controls.
+        </li>
+        <li>
+          Run Azure Backup and Recovery Services Vault operations,
+          restoration tests and DR/failover exercises.
+        </li>
+        <li>
+          Resolve approximately 10 incidents per month, including P1/P2,
+          and convert RCA findings into automation or monitoring improvements.
+        </li>
+        <li>
+          Use Azure Monitor and Log Analytics to analyze alerts and logs
+          and validate post-deployment health.
+        </li>
+        <li>
+          Support CI/CD and release operations on Azure DevOps by validating
+          Azure infrastructure prerequisites, monitoring deployments and
+          troubleshooting environment and configuration issues with
+          application teams.
+        </li>
+        <li>
+          Maintain automation scripts and runbooks in Git under controlled
+          change and peer review.
+        </li>
+        <li>
+          Support Azure Policy, rightsizing and FinOps initiatives,
+          contributing to approximately 15% infrastructure cost optimization.
+        </li>
+        <li>
+          Build Infrastructure as Code skills through Terraform provisioning
+          labs covering providers, state, plan/apply, VNets, Subnets,
+          NSGs and VMs.
+        </li>
+      </ul>
+    </div>
+
+    <!-- SENIOR ANALYST -->
+    <div class="card">
+      <h3>Senior Analyst — Cloud Infrastructure Operations</h3>
+      <p class="meta">
+        HCLTech | Bengaluru | Jan 2025 – Jun 2025
+      </p>
+
+      <ul class="clean">
+        <li>
+          Operated enterprise Azure and GCP infrastructure 24×7 at
+          100% SLA compliance.
+        </li>
+        <li>
+          Managed 6,000+ Azure VMs across 83 subscriptions and approximately
+          10,000 cloud resources.
+        </li>
+        <li>
+          Automated disk cleanup and snapshot creation/deletion with
+          PowerShell, removing manual steps from recurring work.
+        </li>
+        <li>
+          Monitored infrastructure with Azure Monitor, Log Analytics and
+          GCP Operations Suite for alert response and proactive troubleshooting.
+        </li>
+        <li>
+          Processed 70+ service requests and approximately 15 incidents per
+          month, converting RCA findings into preventive fixes and automation.
+        </li>
+        <li>
+          Supported backup validation, restoration testing, DR/failover
+          exercises, cloud governance and resource optimization.
+        </li>
+      </ul>
+    </div>
+
+    <!-- ANALYST -->
+    <div class="card">
+      <h3>Analyst — Azure Cloud Infrastructure Operations</h3>
+      <p class="meta">
+        HCLTech | Bengaluru | Oct 2021 – Jan 2025
+      </p>
+
+      <ul class="clean">
+        <li>
+          Administered Azure compute, storage, networking, firewall, DNS,
+          backup and recovery services across enterprise environments.
+        </li>
+        <li>
+          Provisioned, modified and decommissioned VMs with optimal configurations.
+        </li>
+        <li>
+          Delivered L2 support for P1–P4 incidents under ITSM and SLA controls
+          using ServiceNow, coordinating root cause analysis with Microsoft
+          and Google support.
+        </li>
+        <li>
+          Scheduled patching with Azure Update Management / Azure Update
+          Manager and used the PMC tool for runtime scheduling to reduce
+          operating costs.
+        </li>
+        <li>
+          Performed monthly cleanup of orphaned resources, recommended
+          reserved instances and savings plans, and carried out cost analysis
+          and estimation across Azure and GCP.
+        </li>
+        <li>
+          Configured Azure File Sync and Azure DNS, and worked on NSGs,
+          firewall policies and inter-cloud connectivity.
+        </li>
+        <li>
+          Performed security audits and IAM policy reviews, and rotated
+          Google Cloud service account keys.
+        </li>
+        <li>
+          Led technical DR activities in biannual exercises covering
+          backup validation, restoration and failover.
+        </li>
+        <li>
+          Wrote knowledge base articles, delivered knowledge-transfer
+          sessions and mentored junior team members.
+        </li>
+      </ul>
+    </div>
+
+    <!-- TRAINEE -->
+    <div class="card">
+      <h3>Project Trainee — Cloud Operations</h3>
+      <p class="meta">
+        HCLTech | Bengaluru | May 2021 – Sep 2021
+      </p>
+
+      <ul class="clean">
+        <li>
+          Assisted with Azure infrastructure monitoring, administration,
+          incident resolution and service request fulfilment.
+        </li>
+        <li>
+          Created operational documentation and knowledge articles.
+        </li>
+      </ul>
+    </div>
+
+    <!-- CORE SKILLS -->
+    <div class="card">
+      <h3>Core Skills & Technical Expertise</h3>
+
+      <ul class="clean">
+        <li>
+          <strong>Cloud platforms:</strong>
+          Microsoft Azure, Google Cloud Platform (GCP), IaaS,
+          hybrid and multi-cloud, Azure Portal.
+        </li>
+        <li>
+          <strong>Compute:</strong>
+          Azure Virtual Machines — provisioning, resizing and
+          decommissioning; Managed Disks, Snapshots, VM lifecycle,
+          high availability, fault tolerance, scalability and capacity planning.
+        </li>
+        <li>
+          <strong>Networking:</strong>
+          VNets, Subnets, VNet Peering, NSGs, Azure Firewall,
+          Application Gateway, Azure Bastion, Azure Load Balancer,
+          Azure DNS, VPN, ExpressRoute, inter-cloud connectivity
+          and connectivity troubleshooting.
+        </li>
+        <li>
+          <strong>Storage and backup:</strong>
+          Storage Accounts, Azure File Sync, Azure Backup,
+          Recovery Services Vault, backup validation,
+          restoration testing and hybrid storage.
+        </li>
+        <li>
+          <strong>Identity and security:</strong>
+          Microsoft Entra ID, Azure RBAC, IAM, Azure Key Vault,
+          access reviews, least privilege, security audits,
+          key rotation and compliance.
+        </li>
+        <li>
+          <strong>Monitoring and operations:</strong>
+          Azure Monitor, Log Analytics, GCP Operations Suite,
+          alerting, L2 support, P1–P4 incident management,
+          RCA, SLA adherence, ServiceNow and ITSM.
+        </li>
+        <li>
+          <strong>Automation and IaC:</strong>
+          PowerShell, Azure Automation, Runbooks,
+          Azure Update Manager, Azure Update Management,
+          automation workflows and Terraform fundamentals.
+        </li>
+        <li>
+          <strong>Azure DevOps:</strong>
+          Azure Repos, Azure Pipelines, Git/GitHub, source control,
+          CI/CD concepts, release support, pipeline troubleshooting
+          and Infrastructure as Code.
+        </li>
+        <li>
+          <strong>Containers — learning:</strong>
+          Docker, container images, Azure Kubernetes Service (AKS)
+          fundamentals and deployment labs.
+        </li>
+        <li>
+          <strong>Governance and FinOps:</strong>
+          Azure Policy, Cost Management, rightsizing, reserved instances,
+          savings plans, orphaned-resource cleanup and PMC runtime scheduling.
+        </li>
+        <li>
+          <strong>Resilience:</strong>
+          BCDR, disaster recovery planning, failover testing
+          and business continuity.
+        </li>
+      </ul>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="card">
+      <h3>Certifications</h3>
+
+      <ul class="clean">
+        <li>
+          Microsoft Certified: Azure Administrator Associate (AZ-104)
+        </li>
+        <li>
+          Microsoft Certified: Azure Fundamentals (AZ-900)
+        </li>
+        <li>
+          Google Cloud Certified: Professional Cloud DevOps Engineer
+        </li>
+      </ul>
+    </div>
+
+    <!-- LEARNING -->
+    <div class="card">
+      <h3>Azure DevOps Learning — Hands-on Labs</h3>
+      <p class="meta">
+        Learning activities that complement my production cloud
+        infrastructure and operations experience.
+      </p>
+
+      <ul class="clean">
+        <li>
+          <strong>Azure DevOps and Git:</strong>
+          Practice with Azure Repos, Pipelines and GitHub covering
+          source control, branching, CI/CD pipeline flow
+          and deployment troubleshooting.
+        </li>
+        <li>
+          <strong>Terraform on Azure:</strong>
+          Provisioning labs covering providers, state,
+          plan/apply workflows, VNets, Subnets, NSGs and Virtual Machines.
+        </li>
+        <li>
+          <strong>Containers on Azure:</strong>
+          Docker image builds and Azure Kubernetes Service
+          deployment labs.
+        </li>
+        <li>
+          <strong>Observability:</strong>
+          Azure Monitor and Log Analytics alerts and log analysis
+          to validate post-deployment health.
+        </li>
+      </ul>
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+    <div class="card">
+      <h3>Achievements & Recognition</h3>
+
+      <ul class="clean">
+        <li>
+          Maintained 100% SLA compliance across 6,000+ Azure VMs
+          in 83 subscriptions at HCLTech.
+        </li>
+        <li>
+          Contributed to approximately 15% infrastructure cost optimization
+          through rightsizing, PMC runtime scheduling, orphaned-resource
+          cleanup, and reserved instance and savings plan recommendations.
+        </li>
+        <li>
+          Received client appreciation for resolving a complex
+          CrowdStrike issue.
+        </li>
+        <li>
+          Implemented a failover testing strategy for disaster
+          recovery readiness.
+        </li>
+        <li>
+          Earned Silver and Golden Jewel Awards for outstanding
+          performance at HCLTech.
+        </li>
+        <li>
+          Completed T2ID Academics in the GCP Cloud Platform.
+        </li>
+      </ul>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="card">
+      <h3>Education</h3>
+      <p>
+        Bachelor of Engineering — Electronics and Communication Engineering
+      </p>
+      <p class="meta">
+        Dr. Mahalingam College of Engineering and Technology, Pollachi
+        <br>
+        2016 – 2020 | 78.6%
+      </p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="card">
+      <h3>Contact Details</h3>
+
+      <ul class="clean">
+        <li>Muthu Senthil S | Azure Infrastructure Engineer</li>
+        <li>Coimbatore, India</li>
+        <li>
+          Email:
+          <a
+            href="mailto:muthusenthilshanmugam@gmail.com"
+            style="color: var(--accent); overflow-wrap: anywhere;"
+          >muthusenthilshanmugam@gmail.com</a>
+        </li>
+        <li>
+          Phone:
+          <a href="tel:+918098707163" style="color: var(--accent);">
+            +91 8098707163
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/muthu-senthil-shanmugam-4492bb1b4/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color: var(--accent);"
+          >LinkedIn — Muthu Senthil Shanmugam</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
